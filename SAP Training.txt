@@ -1,0 +1,27 @@
+############################################
+
+SAP SCM (Supply Chain Management) is a software solution offered by SAP AG 
+that encompasses several modules including 
+    1. MM (Materials Management), 
+    2. WM (Warehouse Management), 
+    3. PP (Production Planning), and 
+    4. QM (Quality Management). 
+    
+These modules provide an end-to-end solution for managing the supply chain of an organization
+
+###########################################
+What is SAP?
+
+SAP - System Application Products in Data Processing 
+
+ERP - Enterprise Resource Planning 
+
+
+
+
+###########################################
+SAP BASIS
+
+
+
+
