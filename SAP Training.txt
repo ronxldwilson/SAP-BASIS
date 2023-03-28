@@ -16,12 +16,146 @@ SAP - System Application Products in Data Processing
 
 ERP - Enterprise Resource Planning 
 
+Silos breakdown done by ERP
 
+SAP has two areas:
+1. SAP Technical
+    - SAP ABAP
+        Used for Development
+        
+        Languages Required:
+        SQL, C,  
+    - SAP BASIS (SAP Admin)
+    - SAP GRC (SAP Security)
+        
+2. Functional
+    - Finance
+    - Sales
+    - Material Management
+    - Plant Maintainece
+    - SAP SCM (Supply Chain Management)
+    - SAP CRM (Customer Relationship Management)
 
+Note:     
+TCODES are assign for each modules
+TCODES - Transaction Codes
+
+IN SAP all operation are carried uisng TCODES
+
+##Benefits with ERP​
+​
+Competition. It’s true that ERP software requires a major investment, but there’s also 
+an even bigger cost in not making the investment. While some manufacturers choose to stick 
+to the tried and true methods of the past, others seek technology solutions.  Manufacturers 
+cannot afford to put off an ERP implementation while their competition invests in ERP and 
+starts reaping the many benefits we’ll touch on below.​
+​
+Efficiency. An ERP solution eliminates repetitive processes and greatly reduces the need 
+to manually enter information. The system will also streamline business processes and make 
+it easier and more efficient for companies to collect data, no matter what department they’re working in.​
+​
+Forecasting. Enterprise resource planning software gives your users, and especially managers, 
+the tools they need to create more accurate forecasts. Since the information within ERP is as 
+accurate as possible, businesses can make realistic estimates and more effective forecasts.​
+​
+Collaboration. Nobody wants to run a siloed business with each department functioning separate 
+from the other. Collaboration between departments is a crucial and often necessary part of the 
+business. With the data entered into ERP systems being centralized and consistent, there’s no 
+reason why departments can’t work together. The software also touches on almost every aspect 
+of a business, thus naturally encouraging collaborative, interdepartmental efforts.​
+​
+Scalability. Did you know? Structured ERP systems allow the addition of new users and functions 
+to grow the initially implemented solution over time. When your business is ready to grow or needs 
+more resources, enterprise resource planning software should be able to facilitate that growth.​
 
 ###########################################
-SAP BASIS
+SAP BASIS - SAP Administration
+    - Start/Stop of SAP system
+    - Upgradation of SAP System
+    - Installation of SAP System
+    - Integration of SAP System
 
 
 
+# SAP BASIS ADMINISTRATOR
 
+Will need to learn more about the SAP products, the Databases, the Networks and how they work, 
+will need to learn multiple OS(Windows, AIX, Linux)
+
+# SAP Landscape
+
+    Sandbox - Play area for the System. Used for R&D
+    Dev System - Create Changees or enhancements as per business requirements
+    Quality/Testing assurance system- Test of the Development activity
+    Production - Business System (Be careful while working on this)
+
+    Training System - 
+    Regression/Migration - 
+        SAP System Refresh - Basically clone down from PROD
+    
+
+# SAP GUI - SAP 
+
+FQD - Fully Qualified Domain
+
+####################################
+
+SAP Softwares 
+support.sap.com
+SUSER ID - given by an organization to a users
+launchpad,support.sap.com
+
+####################################
+
+SAP PAM - Product availability Matrix (Very Important to ensure that the product is working properly)
+This contains the documentation for SAP products. This also contains a list of dependencies to ensure that the 
+correct servers and Database Versions are installed for that particular product.
+
+EHP - Enhancement Patch released for a version
+######################################
+
+Reporting and Tracking a support incident
+    Report an Incidnet
+
+SLicense - Every SAP system has a License Key, this is required for PROD instances
+
+
+########################################
+There are various ways to access an SAP System. The most commonly used are SAPGUI for Windows, 
+SAPGUI for JAVA and WEBGUI for browsers​
+
+SAPGUI is a client utility that has to be installed on a user’s machine​
+SAPGUI is available for installation on Windows and on Non-Windows platforms as well​
+A JAVA based SAPGUI is required for OS such as Linux or any other Unix flavor​
+SAPGUI is available as SAPGUI for HTML, popularly called WEBGUI, that is supported on most 
+common browsers such as IE 6, Firefox 3​
+For Windows desktops, the entries in the SAPGUI logon pad are stored in a file called saplogon.ini file, 
+which is located in the path C:\Windows​
+
+
+########################################
+There are few componts which are installed by default whihc ensures that the SAP runs properly
+
+SNOTE: SAP NOTE - This is given by SAP as an instruction, Basically a Knowledge Article, which are used to fix issues
+
+There are 2 types of SAP Notes:
+1. Manual Correction
+2. By using SNOTE TCDOE we can implement solution
+
+GoTo> Upload SAP Note
+GoToDownlaoad SAP Note>Enter Note Numeber> Execute
+
+Can be implemented?
+It can implemetned to fix the issues
+
+.SAR file - IT's like a ZIP File
+unCARing the SAR file gets the Media File
+
+SAPCAR - using this Software
+
+Command to UNCAR the SAR File 
+CMD > SAPCAR -xvf SAPCARDJASDHNJKLASDN.SAR
+
+SAPinst> Run as Admin
+
+Software provisioning manager 
