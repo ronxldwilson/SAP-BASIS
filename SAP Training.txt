@@ -159,3 +159,114 @@ CMD > SAPCAR -xvf SAPCARDJASDHNJKLASDN.SAR
 SAPinst> Run as Admin
 
 Software provisioning manager 
+
+#######################################################
+
+How frequent are system refresh? Do they happen on a scheduled basis or are they done on-demand?
+
+#######################################################
+# DAY 2
+SAP Architecture - has 3 layers
+1. Presentation Layer
+2. Application Layer 
+3. Database Layer
+
+Layers of SAP
+
+SAP(on Top of Database)
+Database (On Top of OS )
+Operating System (Contains resources like CPU, RAM and NETWORK)
+
+
+SAP MMC - SAP Management Console
+
+## OLD Architecture
+        |SAP|
+    |DATABASE|
+|Operating System|
+
+This has issues as the system can go down
+
+## NEW Architecture
+    |DATABASE|  <-------------------|SAP|                   |SAP GUI|
+|Operating System|              |Operating System|      |Operating System|
+
+#3 tier Architecture
+This distributes the load and ensures that the overall system works well​
+
+##############################
+
+SAP R/3 System
+
+R stands for Real Time
+3 stands for the layers 
+
+# SAP R2 Architectue in which the Database, SAP are together and SAP GUI is separate
+# SAP R1 Architectue in which the Database, SAP and SAP GUI are all together 
+
+
+Presentaion layer on the local system | Application layer and Database layer somewhere else that is R2
+
+# Application Layer
+Application Layer contains the core services of SAP which keeps the services alive
+
+    Message Server - 
+    Dispatcher - takes the request from  the Presentaion layer and allocates the requst to work processes
+        It is the heart of the SAP System, always ensure that 
+        Works on FIFO principle
+        POC between the GUI and and the Workprocesses
+
+    Workprocesses - there are 5 types of Workprocesses
+        1. Dialog - This does the active work which is assigned | handles all the OLTP Transaction (Online Transational Processing)
+        2. Background - Can be used to run Background jobs, this is done for running big tasks, like resetting password for 50 people,
+            the order directly comes from Dispatcher and takes Enqueue work process with it, lock the table,  
+        3. Update - This updates the record in the table, the Dialog Workprocesses handles the update Workprocesses
+        4. Enqueue - Basically one user can work on one table at a time, it will lock it for other users   
+                It works at the OS Level
+                
+        5. Spool -  Spool is dedicated Workprocesses for printing 
+        
+        Two Major Services considers in Workprocesses
+        1. Message Services - Gives oxygen to the Dispatcher
+                It's a kind of service which allows you to talk to other SAP System, like QA, Prod and all
+        2. Gateway Services - It's a kind of service which allows you to talk to other 3rd party system.
+                
+        
+TCODE - SU01 (Helps in Create, delete, and change values)
+TCODE - SM50 (To see the work processes) (To see if the system is healthy) (All the process should be in waiting status)
+TCODE - SM04 (Shows the people logged in the system) (or USER Session) (can be used to check if a user is using too much RAM)
+TCODE - RZ10 (Used for Editing the user profiles)
+TCODE - SM36 (allows for scheduling Background Jobs)
+TCODE - SM12 - Lock Entires in SAP system (Shows the tables which have been locked)
+TCODE - SPAD Integration with printers??
+TCODE - SLicense - Shows all the License keys
+TCODE - ST06 to check the utilization
+TCODE - 
+TCODE - 
+TCODE - 
+
+
+#####################################################
+SAP system are of two types
+ABAP SAP System -   It's found in GUI       
+JAVA SAP System -   There will be no GUI here, you will have to login online
+                    You have to work on URLs in a browser
+                    There is no Workprocesses here           
+                    There are no TCODEs here
+                
+                Server Nodes:    
+
+These two system talk using Gateway Channel
+
+
+##############################################################################
+Resource for SAP 
+Tutorials Point https://www.tutorialspoint.com/sap/sap_architecture.htm
+Guru99  https://www.guru99.com/learning-sap-architecture.html
+ITsiti https://itsiti.com/as-abap-architecture-process/
+
+################################################################
+ICM - Internet Communication Manager - helps in linking between ABAP and JAVA 
+
+
+
