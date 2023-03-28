@@ -223,7 +223,7 @@ Application Layer contains the core services of SAP which keeps the services ali
         3. Update - This updates the record in the table, the Dialog Workprocesses handles the update Workprocesses
         4. Enqueue - Basically one user can work on one table at a time, it will lock it for other users   
                 It works at the OS Level
-                
+
         5. Spool -  Spool is dedicated Workprocesses for printing 
         
         Two Major Services considers in Workprocesses
@@ -232,6 +232,9 @@ Application Layer contains the core services of SAP which keeps the services ali
         2. Gateway Services - It's a kind of service which allows you to talk to other 3rd party system.
                 
         
+Dispathcers neeeds the Message Server, the Work Process needs Dispatcher to work, the Message Server needs the Database work
+
+
 TCODE - SU01 (Helps in Create, delete, and change values)
 TCODE - SM50 (To see the work processes) (To see if the system is healthy) (All the process should be in waiting status)
 TCODE - SM04 (Shows the people logged in the system) (or USER Session) (can be used to check if a user is using too much RAM)
@@ -269,4 +272,50 @@ ITsiti https://itsiti.com/as-abap-architecture-process/
 ICM - Internet Communication Manager - helps in linking between ABAP and JAVA 
 
 
+################################################################
 
+Installation of SAP
+SAP is segregated in 2 parts:
+
+ASCS - ABAP SAP Central Service and 
+PAS - Primary Application Service
+
+Instance Number - Needs to be between 00-99 - Should be numeric
+
+# Give ASCS as 01 instance number
+# and PAS as 00 instance number
+
+ASCS is a core component of SAP server which contains the Message Server and Enqueue Server
+PAS contains Dispatcherm, Gateways and ICMs
+
+#################################################################
+
+
+    |DATABASE|  <-------------------|ASCS|<-------------       |PAS|
+|Operating System|              |Operating System|      |Operating System|
+
+#################################################################
+
+
+    |DATABASE|  <-------------------|ASCS|<-------------       |PAS|
+|Operating System|              |Operating System|      |Operating System|
+        |                                |                        |
+        |                                |                        |     
+        |                                |                        |
+    |DATABASE|  <-------------------|ASCS|<-------------       |PAS|
+|Operating System|              |Operating System|      |Operating System|
+
+
+High availability Pair Basically like what happens in ServiceNow
+OR 
+Disaster Recovery
+
+There is one in the Metro location and other in Geo Location
+
+if there is USR> SAP folder 
+
+OR in Task Manager-> Services -SAPDB201
+
+SAP services are running in the SERVICES in TASK Manager then that means the system has SAP installed
+
+Never let the message server go down
