@@ -238,6 +238,8 @@ Application Layer contains the core services of SAP which keeps the services ali
                 It follows FIFO process
                 To0 serialize the update and perform lock management
 
+                Locking and unlocking of an object
+
         5. Spool(S) -  Spool is dedicated Workprocesses for printing 
                 For Generating the Reports            
 
@@ -458,14 +460,37 @@ DAY 4
 RFC - It creates a connectivity between SAP systesm, it can connect with SAP-SAP system using ABAP connection,
     or it can connect to non SAP system using HTTP. It is done using Message Server. 
 
-TCODE - SM59 The transaction to create RFC 
+TCODE - SM59 The transaction to create RFC
 Monitoring - List of Transactions which you need to monitor
 
 Transaction Based 
 SM37 - Checks all Background process, ensure that NO Background process fails 
-ST22 Dumps
+ST22 Dumps 
 
 TCODE - SM21 - System Logs
+
+Need for Monitoring - To take proactive measures
+
+
+TCODE SM51 - Instances of SAP System
+TCODE SM12 - Enqueue Administration 
+TCODE SM13 - 
+TCODE AL08 - List of system Logged in User
+Update - For Critical
+Update Task 2 for non Critical
+
+
+Application Server - It handles the various workprocess, the more app servers you have the faster will be your system
+    
+Orphaned Lock - Basically when the lock is not opened even when the user has logged out
+
+/NST22
+
+ST22 - Dump Details of the Failed Transactions
+SP01 - Spool MOnitoring
+
+
+SM59 - RFC Connections
 
 
 
