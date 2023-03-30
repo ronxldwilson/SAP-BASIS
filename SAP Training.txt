@@ -87,6 +87,7 @@ will need to learn multiple OS(Windows, AIX, Linux)
     Sandbox - Play area for the System. Used for R&D
     Dev System - Create Changees or enhancements as per business requirements
     Quality/Testing assurance system- Test of the Development activity
+    // Pre-Prod - maybe there, but not required 
     Production - Business System (Be careful while working on this)
 
     Training System - 
@@ -232,8 +233,9 @@ Application Layer contains the core services of SAP which keeps the services ali
         2. Gateway Services - It's a kind of service which allows you to talk to other 3rd party system.
                 
         
-Dispathcers neeeds the Message Server, the Work Process needs Dispatcher to work, the Message Server needs the Database work
+Dispathcers needs the Message Server, the Work Process needs Dispatcher to work, the Message Server needs the Database work
 
+RFC - Remote fuction call
 
 TCODE - SU01 (Helps in Create, delete, and change values)
 TCODE - SM50 (To see the work processes) (To see if the system is healthy) (All the process should be in waiting status)
@@ -313,9 +315,127 @@ Disaster Recovery
 There is one in the Metro location and other in Geo Location
 
 if there is USR> SAP folder 
-
 OR in Task Manager-> Services -SAPDB201
-
 SAP services are running in the SERVICES in TASK Manager then that means the system has SAP installed
 
-Never let the message server go down
+### Never let the message server go down
+
+
+
+## Presentaion layer gives the output
+# Once you are in presentation layer then you get access to application layer
+# Once you are in authenticated you move on to the application
+# Then the application layer access the database layer
+
+#########################################################################
+DAY 3
+
+SAP - Global User Interface
+SAP applicatioon is were you will be using the functionalities provided by the SAP
+
+# DB could be anything S4/HANA, Microsft SQL, Oracle
+
+# Database is the main storage unit of the SAP
+
+#
+#######################################################################
+Client Architectue
+
+SAP Reference Client
+Clinet 000
+Clinet 066
+Client 011
+
+What is Client?
+
+
+Client Administration:
+SAP is an applicaiton which allows to create 1000 partiion within it, starting from (000-999), we can use any 
+except the 000 , and 066
+
+
+##  In Prod It is required to work in a single Client.
+## In dev it is recoommended to work with one client, but if there is a R&D requirement, you can create a new
+client which imports the objects from the OG client
+
+## Client Roles
+Customizing - For Configuring Client setting and create new functionality
+Test - For testing functionality and verifying configuration
+Production - For productive activites and business data
+Demo - For experimenting with Customizing Transaction and setting (A Sandbox client to transaction)
+Training - For end user training
+SAP References - SAP refernce client setting
+
+You may have access to client 100, but not Client 130
+
+# if you are making changes in Standard - then it will change for all clients
+# cross client objects aka workbench request, if a change is made on standard change, then standard change made in clinet 100 ads well as client 200
+# Non Cross Client object aka Customizing object, in this the changes of one are not affecting the chagnes of other.
+
+
+Client Administration tools:
+TCODE - SE06 -Set restriction for individual components
+TCODE - SCC4 - Maintain Client s / client management/ Client Administration / Create new client
+
+TCODE - SCCL - Local Client Copy 
+TCODE - SCC9 - Remote Client Copy 
+TCODE - Client Import Export
+TCODE - SCC1 - Special function SCC1
+    TCODE - SCC5 - Delete Client // Used during system refresh, to delete the clients in 
+    TCODE - SCU0 - Table Analysis
+
+Client Transport    
+    TCODE - SCC8 - Client Export
+    TCODE - SCC7 - Post process import
+    TCODE - SCC9 - Remote copy Without using TMS / Transport Management System
+TCODE - SCC3 Client Copy logs
+
+
+
+When you create a new client, you will need to copy the Golden Data from the Client 000, 
+
+f
+## System refresh is done only to Quality instances, it is the copying of the data from Prod to QA 
+## Every 6 months we do a system refresh to ensure that the data is same in both the instances
+# 
+
+
+## Before the System Refresh, we take a backup of the client configurations using Client Transport / Client Export
+## If this is not done, it  might have the setting of prod, which
+
+
+
+
+## Client Independent tables should not be copied in clinet copy to diffrenet System
+## Select Client Profile -  SAP_ALL, SAP_CUST, SAP_APPL, etc 
+
+
+Logical Client Name and  Virtual Client Name - BD54
+
+## For System refresh we use SAP_USER Client Copy profile
+
+## Client is like a partioin in the workspace, and the place where you will work
+
+
+R4E is a SAP Server which has 2 departments
+1. 100 -Finance 
+2. 200 - HR
+
+Split Client for the system for non prod system, divide the workspace and everyone works on diffrenet Client 
+Use one client in the Production
+
+
+SAP Netweaver 
+and S4 HANA
+
+Associate level Certification
+
+
+
+
+
+
+
+
+
+
