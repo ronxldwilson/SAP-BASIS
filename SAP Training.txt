@@ -218,20 +218,42 @@ Application Layer contains the core services of SAP which keeps the services ali
         POC between the GUI and and the Workprocesses
 
     Workprocesses - there are 5 types of Workprocesses
-        1. Dialog - This does the active work which is assigned | handles all the OLTP Transaction (Online Transational Processing)
-        2. Background - Can be used to run Background jobs, this is done for running big tasks, like resetting password for 50 people,
-            the order directly comes from Dispatcher and takes Enqueue work process with it, lock the table,  
-        3. Update - This updates the record in the table, the Dialog Workprocesses handles the update Workprocesses
-        4. Enqueue - Basically one user can work on one table at a time, it will lock it for other users   
-                It works at the OS Level
+        1. Dialog (D)- This does the active work which is assigned | handles all the OLTP Transaction (Online Transational Processing)
+        If u are connecting to SAP system thru GUI that means you are connected thru Dialog Workprocess
 
-        5. Spool -  Spool is dedicated Workprocesses for printing 
+        2. Background (B) - Can be used to run Background jobs, this is done for running big tasks, like resetting password for 50 people,
+            the order directly comes from Dispatcher and takes Enqueue work process with it, lock the table,
+
+              The Jobs which do not require an active intervention is called as background workprocess. 
+                It runs automaticallly at the same time.
+
+              In Each systyem there should be atleast 2 background job one
         
+        3. Update (V)- This updates the record in the table, the Dialog Workprocesses handles the update Workprocesses
+            For updating the System
+
+        4. Enqueue (E) - Basically one user can work on one table at a time, it will lock it for other users   
+                It works at the OS Level
+                It ensures that the work is serialized in the system using the Lock Table 
+                It follows FIFO process
+                To0 serialize the update and perform lock management
+
+        5. Spool(S) -  Spool is dedicated Workprocesses for printing 
+                For Generating the Reports            
+
         Two Major Services considers in Workprocesses
-        1. Message Services - Gives oxygen to the Dispatcher
+        1. Message Services (M) - Gives oxygen to the Dispatcher
                 It's a kind of service which allows you to talk to other SAP System, like QA, Prod and all
-        2. Gateway Services - It's a kind of service which allows you to talk to other 3rd party system.
-                
+        
+                It is reponsible for communication between diffrent dispacther of diffrent SAP system or within the same system.
+
+        2. Gateway Services (G)- It's a kind of service which allows you to talk to other 3rd party system.
+        It can also allows the communication beteween two SAP system
+        
+        It allows if the commuication can be passed or not, the message server established the commuincation, 
+
+        Message Server - Create the connection / Establish the connection
+        Gateway Server - It creates the approval for the connection, if it is allowed to happen or not
         
 Dispathcers needs the Message Server, the Work Process needs Dispatcher to work, the Message Server needs the Database work
 
@@ -288,7 +310,7 @@ Instance Number - Needs to be between 00-99 - Should be numeric
 # and PAS as 00 instance number
 
 ASCS is a core component of SAP server which contains the Message Server and Enqueue Server
-PAS contains Dispatcherm, Gateways and ICMs
+PAS contains Dispatcherm, Gateways and ICMs 
 
 #################################################################
 
@@ -344,7 +366,7 @@ Client Architectue
 SAP Reference Client
 Clinet 000
 Clinet 066
-Client 011
+Client 001
 
 What is Client?
 
@@ -374,6 +396,7 @@ You may have access to client 100, but not Client 130
 
 
 Client Administration tools:
+TCODE - SCCC3 - Client Monitoring
 TCODE - SE06 -Set restriction for individual components
 TCODE - SCC4 - Maintain Client s / client management/ Client Administration / Create new client
 
@@ -386,15 +409,13 @@ TCODE - SCC1 - Special function SCC1
 
 Client Transport    
     TCODE - SCC8 - Client Export
-    TCODE - SCC7 - Post process import
+    TCODE - SCC7 - Client Post process import
     TCODE - SCC9 - Remote copy Without using TMS / Transport Management System
 TCODE - SCC3 Client Copy logs
 
 
-
 When you create a new client, you will need to copy the Golden Data from the Client 000, 
 
-f
 ## System refresh is done only to Quality instances, it is the copying of the data from Prod to QA 
 ## Every 6 months we do a system refresh to ensure that the data is same in both the instances
 # 
@@ -402,9 +423,6 @@ f
 
 ## Before the System Refresh, we take a backup of the client configurations using Client Transport / Client Export
 ## If this is not done, it  might have the setting of prod, which
-
-
-
 
 ## Client Independent tables should not be copied in clinet copy to diffrenet System
 ## Select Client Profile -  SAP_ALL, SAP_CUST, SAP_APPL, etc 
@@ -431,9 +449,23 @@ and S4 HANA
 Associate level Certification
 
 
+Export and Import are done during the Remtore Client Copy, Export is done on the Source side and the import on the target system
 
 
+##########################################################################
+DAY 4
 
+RFC - It creates a connectivity between SAP systesm, it can connect with SAP-SAP system using ABAP connection,
+    or it can connect to non SAP system using HTTP. It is done using Message Server. 
+
+TCODE - SM59 The transaction to create RFC 
+Monitoring - List of Transactions which you need to monitor
+
+Transaction Based 
+SM37 - Checks all Background process, ensure that NO Background process fails 
+ST22 Dumps
+
+TCODE - SM21 - System Logs
 
 
 
