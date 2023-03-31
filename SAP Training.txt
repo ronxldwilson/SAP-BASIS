@@ -472,9 +472,10 @@ TCODE - SM21 - System Logs
 Need for Monitoring - To take proactive measures
 
 
-TCODE SM51 - Instances of SAP System
+TCODE SM51 - Instances of SAP System // Manage Work processes
+TCODE SM66 - To check global work processes
 TCODE SM12 - Enqueue Administration 
-TCODE SM13 - 
+TCODE SM13 -  
 TCODE AL08 - List of system Logged in User
 Update - For Critical
 Update Task 2 for non Critical
@@ -488,11 +489,60 @@ Orphaned Lock - Basically when the lock is not opened even when the user has log
 
 ST22 - Dump Details of the Failed Transactions
 SP01 - Spool MOnitoring
-
-
 SM59 - RFC Connections
 
+############################################################################
+DAY 5
+
+Transport Management System
+
+Bundeled package is called as Transport
+        
+Transport Management System - This is a one time task which is done
+Domain Controller - This maintains the paths - Created thru development System
+ 
+For every Transport Request 
+Data File = Dentoed by R - This contains the Real data which I want to move
+Co File =  Denoted by K - Something Like Metadata, what does the data contain. It contains the information about the data. 
+
+and the path at OS Level usr/sap/trans/ 
+
+Once the Developer Clicks on Release, then the data and Co-file are creaeted
+
+Ways of Importing:
+1. Manual Import: 
+2. Automatic Import:  
+
+This process is owned by SAP BASIS
 
 
+Changes to PROD requires all the approvals are achieved - You can't do auto import here.
+From Quality to Prod we move it manually. 
 
 
+Transport Management Can be configured only in 000 Client
+
+#Three Types of Tranaport Requests
+workbench Request - For all the clietns
+Customizing - For a specific client
+Transport of Copies
+
+TCODE STMS_IMPORT - To import a Transport
+
+Transport Request are created in DEV ins
+
+
+Consolidated Route
+Delivery Route
+
+The Route between Dev-->QA-->PreProd is consolisdated route 
+
+The Route between PreProd --> Prod is Delivery route 
+
+SE01 -Create a Transport - Workbech Request
+
+Give the Transport to Developer
+Release the Transport
+Import the Transport in QAS using STMS_IMPORT
+
+STMS_PATH
