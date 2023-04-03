@@ -546,3 +546,52 @@ Release the Transport
 Import the Transport in QAS using STMS_IMPORT
 
 STMS_PATH
+
+########################################################################################
+Day 6
+
+Background Jobs
+
+In Dialsog Max allowed time is 600 seconds = 10 Mins
+
+# what is a background Job/background workprocess?
+If a process is going to exceed 600 secs, then we go for background jobs
+
+if a job needs to run on Dec31st of every year, then we use a job scheduler to schedule a background job
+
+Job Class A>B>C (Priority of the Job)
+
+TCODE SM36 - Scheduling a background job
+Execution Target - The Server thru which the job should Run
+
+You can create steps for the background job
+- Step user
+
+Start Condition - when should it run
+    -Immediate
+    -Date/Time
+    -After Job 
+    -After Event Job
+
+
+SM37 - Simple job Selection / Search 
+
+Status of a job:
+- Scheduled
+- Released
+After Release no changes are possible
+
+- Ready 
+- Delay 
+- Active
+
+- Finished
+- Cancelled
+
+No Background process should run for more than 24hrs
+
+-if there is Z in the name then it's for that particular client
+
+
+
+
