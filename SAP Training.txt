@@ -595,3 +595,14 @@ No Background process should run for more than 24hrs
 
 
 
+SM36 - To Schedule a new Job \
+SM37  -To monitor a job
+
+To schedule a job we need, variant name, user, program
+
+Operation Mode - Day Mode and Night Mode
+
+
+1. Go to SM36
+2. Define the Job
+3. 
