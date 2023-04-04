@@ -606,3 +606,13 @@ Operation Mode - Day Mode and Night Mode
 1. Go to SM36
 2. Define the Job
 3. 
+##############################################################################################
+Day 7
+Spool Overview
+
+TemSe TEmporary Sequential objects -  the data is stored here before the report is printed
+
+TCODE SP01 & SP02 - Managing Spool Requests
+
+ADS - General PDF printing
+
