@@ -616,3 +616,16 @@ TCODE SP01 & SP02 - Managing Spool Requests
 
 ADS - General PDF printing
 
+#######################################################################
+Day 8
+
+#SAP System Start/Stop process
+
+-IF the DB is HANA then we need to start that as well 
+-IF non HANA then the other teams take cares of it
+
+
+DVBMGS 
+
+
+########################################################################
