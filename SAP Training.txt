@@ -629,3 +629,77 @@ DVBMGS
 
 
 ########################################################################
+Day 9
+
+What is Kernel?
+Its acts as a communicator between the OS and DB
+
+Operating System
+Linux/Unix - Redhat/SUSE 
+Windows - Microsoft 
+AIX - IBM
+AS400 - IBM
+
+DataBase
+Oracle -> Oracle
+MS SQL -> Microsoft
+DB2 -> IBM
+HANA -> SAP
+
+BASIS is also called as Infrastructure solution
+
+Since there are too many combinations possible between the OS and DB, to make the process simple SAP wants
+us to install a Kernel along with it.
+
+Kernel acts like a Middleware which makes the two compatible
+
+## Kernel Upgrade Activity
+
+Go to https://support.sap.com 
+
+And Download
+
+Kernel -> DB Independent -> Linux
+Kernel -> DB Dependent -> Linux -> oracle
+
+Extract and update the file system -- /sapmnt/exe 
+
+SAP Note - When there are issues found in the standard program provided by the SAP, then SAP would create 
+    SAP Note which has correction instruction for that certain program. 
+
+    Then the BASIS admin will implement the SAP Note in the SAP solution.
+
+TCODE - SNOTE - Download the note/implement the note given
+
+
+
+Support Package and Enhancement
+
+SAP every quaterly basis will release a Support Pack which will have
+    -   Set of SAP Notes
+    -   New feeatures which are added
+    -   New Security Fix added
+
+    It's name could look like: SAP BASIS Release 740 SP 02
+
+    - IT's ONLY FOR ONE COMPONET
+
+Stack Upgrade SPSS upgrade
+    -   Basically a set of support packs 
+    -   IT CAN BE COMBINATION OF VARIOUS COMPONETS
+
+Version Upgrade
+    -   Set of Stack Upgrade
+
+    It's name could look like: SAP BASIS Release 750 SP 02
+
+TCODE - SPAM if we have to install a new support pack then we have to use SPAM
+TCODE - SAINT - Installing a component then we have to use SAINT
+
+Suppose u have 
+    SAP BASIS SP01 ->SAP BASIS SPO2 -> U will beed to use SPAM
+
+    Install SAP BASIS-> SAINT -> SAP BASIS SP01 to SPO2 -> Using SPAM
+
+
+TCODE SPAU/SPDD 
