@@ -659,7 +659,7 @@ Go to https://support.sap.com
 
 And Download
 
-Kernel -> DB Independent -> Linux
+Kernel -> DB Independent -> Linux 
 Kernel -> DB Dependent -> Linux -> oracle
 
 Extract and update the file system -- /sapmnt/exe 
@@ -670,8 +670,6 @@ SAP Note - When there are issues found in the standard program provided by the S
     Then the BASIS admin will implement the SAP Note in the SAP solution.
 
 TCODE - SNOTE - Download the note/implement the note given
-
-
 
 Support Package and Enhancement
 
@@ -696,10 +694,82 @@ Version Upgrade
 TCODE - SPAM if we have to install a new support pack then we have to use SPAM
 TCODE - SAINT - Installing a component then we have to use SAINT
 
+To deploy anything new we use SAINT
+To patch anything we use SPAM
+
+
 Suppose u have 
     SAP BASIS SP01 ->SAP BASIS SPO2 -> U will beed to use SPAM
-
     Install SAP BASIS-> SAINT -> SAP BASIS SP01 to SPO2 -> Using SPAM
 
+TCODE SPAU/SPDD - ??
 
-TCODE SPAU/SPDD 
+######################################################################
+Day 10: Java Architecture
+
+AS ABAP - C++ programs 
+AS JAVA - Runs on JAVA EE Enterprise Edition, which has the environment where 
+
+ABAP applicaiton can be accessed via SAP GUI and SAP web GUI
+
+SAP Netweaver is a 
+
+Netweaver there are 2 Stack
+1. ABAP 
+2. JAVA 
+
+AS - Application Server
+
+ASCS - Application Server Central Services
+
+Some products run on dual stack ABAp and JAVA (Dual Stack architecture)
+
+In Java there is Server Process
+
+SCS - Central Service Instance
+
+SAP AS JAVA Instance
+1. Application Instance
+    -   Central Instance
+    -   Central Service Instance
+    -   Dialog Instance 
+
+Types of JAVA applicaiton Server
+1. Central Services Instance
+2. Application Server Instance 
+3. Additional application Server Instance: AAS
+
+
+
+TCDOE SMICM - To end the SAP server
+
+Default Profile - All the parameters are listed
+Instance Profile - if it is to be applied to a certain instance then we use this profile
+
+
+############################################################
+
+sapcontrol -nr <no> -function StartSystem
+sapcontrol -nr <no> -function StopSytem
+
+sapcontrol -nr <no> -function GetProcessList
+/usr/sap/<SID><NO>work
+
+/sapmnt/SID/EXE/ - path for kernel
+windows : D/usr/sap/SID/NO/exe - path for Kernel in windows server 
+
+1. stop 
+2. Got to the required dir 
+3. Find the required kernel file - Service MarketPlace
+4. Uncar the file 
+SAPCAR -xvf <File> - for linux 
+
+chmod 777 <file >
+
+/usr/sap/trans/EPS/IN - New enhancements are kept here 
+
+######################
+
+
+
+
