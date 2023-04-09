@@ -543,6 +543,9 @@ TCODE SM50 - Displays all the Work Processes
 
 It is also possible to view ABAP work process as Unix Processes
     On a UNIX OS level these processes are denoted by "dw"
+    ICM is denoted as icman
+    Gateway is deonted as gwrd
+    Message Server is denoted as ms
 
 #########################################################################
 DAY 3
