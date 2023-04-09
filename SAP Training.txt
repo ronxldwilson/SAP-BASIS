@@ -596,12 +596,14 @@ You may have access to client 100, but not Client 130
 
 Client Administration tools:
 TCODE - SCCC3 - Client Monitoring
-TCODE - SE06 -Set restriction for individual components
-TCODE - SCC4 - Maintain Client s / client management/ Client Administration / Create new client
+TCODE - SE06 - Set restriction for individual components
+TCODE - SCC4 - Maintain Clients / client management/ Client Administration / Create new client
 
 TCODE - SCCL - Local Client Copy 
 TCODE - SCC9 - Remote Client Copy 
+
 TCODE - Client Import Export
+
 TCODE - SCC1 - Special function SCC1
     TCODE - SCC5 - Delete Client // Used during system refresh, to delete the clients in 
     TCODE - SCU0 - Table Analysis
@@ -610,8 +612,8 @@ Client Transport
     TCODE - SCC8 - Client Export
     TCODE - SCC7 - Client Post process import
     TCODE - SCC9 - Remote copy Without using TMS / Transport Management System
-TCODE - SCC3 Client Copy logs
 
+TCODE - SCC3 Client Copy logs
 
 When you create a new client, you will need to copy the Golden Data from the Client 000, 
 
