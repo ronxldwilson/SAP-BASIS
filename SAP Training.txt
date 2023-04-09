@@ -22,7 +22,6 @@ SAP has two areas:
 1. SAP Technical
     - SAP ABAP
         Used for Development
-        
         Languages Required:
         SQL, C,  
     - SAP BASIS (SAP Admin)
@@ -37,10 +36,20 @@ SAP has two areas:
     - SAP CRM (Customer Relationship Management)
 
 Note:     
-TCODES are assign for each modules
+TCODES are assigned for each modules
 TCODES - Transaction Codes
 
-IN SAP all operation are carried uisng TCODES
+IN SAP all operation are carried uisng TCODES, these are codes that can call reports, programs from the user screen
+
+/n denotes a new session. A user can open a max of 6 session, using which they can work in parallel
+/o followed by a TCODE causes the current session to close and the given transaction to open in a new session
+
+Each new session means a new window on screen 
+
+What is ERP?
+
+Enterprise Resource Planning: is a business management system that integrates all facets of the 
+business including planning, manufacturing, sales distribution and marketing.
 
 ##Benefits with ERP​
 ​
@@ -68,14 +77,94 @@ Scalability. Did you know? Structured ERP systems allow the addition of new user
 to grow the initially implemented solution over time. When your business is ready to grow or needs 
 more resources, enterprise resource planning software should be able to facilitate that growth.​
 
+Integrated Information. No more issues with data spread across separate databases; 
+all information will be housed in a single location. This means you can integrate platforms 
+like your CRM software with the ERP system, keeping data consistent, accurate, and unique. 
+Know your customer, their orders, and your inventory, all in one place.
+
+Cost Savings. With one source of accurate, real-time information, ERP software reduces administrative and 
+operations costs. It allows manufacturers to proactively manage operations, prevents disruptions 
+and delays, breaks up information logjams and helps users make decisions more quickly. 
+If you’ve chosen the right solution for your business, and the right vendor who meets your needs, 
+you’re bound to see a powerful ROI.
+
+Streamlined Processes. As manufacturers grow, their operations become more and more complex. 
+Manufacturing software automates business operations cross-departmentally, providing accurate, 
+real-time information to everyone utilizing the solution. ERP increases efficiency and productivity 
+by helping users navigate complex processes, preventing data re-entry, and improving functions such as 
+production, order completion and delivery. Streamlined, efficient processes throughout.
+
+Mobility. An advantage of ERP solutions like WorkWise ERP software is having access to a centralized 
+database from anywhere you work. Home, office, wherever, through our mobile-friendly solution and application.
+
+Reporting. ERP software helps make reporting easier and more customizable. With improved reporting capabilities, 
+your company can respond to complex data requests more easily. Users can also run their own reports without
+relying on help from IT, saving your users time to use toward other projects.
+
+Productivity. Save time and increase productivity levels. Sound too good to be true? It’s not with ERP software. 
+By having redundant processes automated, users have more time to work on other pressing projects and tasks. 
+They’ll also be able to work easier since the solution was designed for ease-of-use.
+
+Regulatory Compliance. A benefit of ERP software which sometimes goes unnoticed is how it ties well into regulatory 
+compliance in the manufacturing industry. Powerful ERP solutions will keep track of regulations within the industry 
+and monitor changes in compliance.
+
+Flexibility. Modern ERP software systems are robust, flexible, and configurable. They are not a one-size-fits-all 
+proposition but can be tailored to the unique needs of a business. ERP systems also can adapt to the ever-changing 
+needs of a growing business, ensuring you won’t have to buy a new solution once your needs change or your business grows.
+
+Customer Service. It’s easier to provide high-quality customer service using an enterprise solution, especially when you’re 
+using one as well-equipped as WorkWise ERP. Sales and customer service people can interact with customers better and improve 
+relationships with them through faster, more accurate access to customers’ information and history. You’ll also have access 
+to marketing automation and contact center software, ensuring your customers are being interacted with consistently.
+
+Security. Data security isn’t a worry when you have an enterprise resource planning solution in place. A new system will 
+improve the accuracy, consistency, and security of data, all through built-in resources and firewalls. Restrictions to data 
+can also be enhanced by managers of the solution, so you can make your own software as secure as you’d like.
+
 ###########################################
-SAP BASIS - SAP Administration
+ERP Packages
+    SAP
+    Oracle-Finacials 
+    Microsft Dynamics
+    JD Edwords
+    People Soft 
+
+###########################################
+SAP Product portfolio
+1. Industry Solutions:
+    IS - Aerospace and Defense
+    IS - Automotive
+    IS - oil 
+
+2. SAP xAPPS
+    SAP xAPPS resource and portfolio management
+    SAP xAPP product definition
+
+3. mySAP business Suite - previously known as mySAP.com
+    mySAP ERP
+    mySAP SCM
+    mySAP SRM 
+    mySAP CRM 
+    mySAP PLM 
+
+    This is a complete package of cross-industry solutions that link people, information and process 
+    All components of the mySAP Business suite are based on SAP Netweaver
+
+4. SAP Netweaver
+    SAP enterprise portal
+    SAP master data management
+    SAP exchange Infrastructure
+    SAP business information Warehouse
+    SAP mobile Infrastructure
+    SAP web applicaiton server 
+    
+###########################################
+SAP BASIS - SAP Administrator
     - Start/Stop of SAP system
     - Upgradation of SAP System
     - Installation of SAP System
     - Integration of SAP System
-
-
 
 # SAP BASIS ADMINISTRATOR
 
@@ -94,6 +183,10 @@ will need to learn multiple OS(Windows, AIX, Linux)
     Regression/Migration - 
         SAP System Refresh - Basically clone down from PROD
     
+    AKA 
+    Dev - Integration System
+    Testing - Consolidation System
+    Prod - Delivery System
 
 # SAP GUI - SAP 
 
@@ -104,13 +197,13 @@ FQD - Fully Qualified Domain
 SAP Softwares 
 support.sap.com
 SUSER ID - given by an organization to a users
-launchpad,support.sap.com
+launchpad.support.sap.com
 
 ####################################
 
 SAP PAM - Product availability Matrix (Very Important to ensure that the product is working properly)
-This contains the documentation for SAP products. This also contains a list of dependencies to ensure that the 
-correct servers and Database Versions are installed for that particular product.
+This contains the documentation for SAP products. This also contains a list of dependencies to ensure 
+that the correct servers and Database Versions are installed for that particular product.
 
 EHP - Enhancement Patch released for a version
 ######################################
@@ -120,22 +213,26 @@ Reporting and Tracking a support incident
 
 SLicense - Every SAP system has a License Key, this is required for PROD instances
 
+########################################
+There are various ways to access an SAP System. The most commonly used are 
+    SAPGUI for Windows, 
+    SAPGUI for JAVA and 
+    WEBGUI for browsers​
+
+    SAPGUI is a client utility that has to be installed on a user’s machine​
+    
+    SAPGUI is available for installation on Windows and on Non-Windows platforms as well​
+    
+    A JAVA based SAPGUI is required for OS such as Linux or any other Unix flavor​
+    
+    SAPGUI is available as SAPGUI for HTML, popularly called WEBGUI, that is supported on most 
+    common browsers such as IE 6, Firefox 3​
+    
+    For Windows desktops, the entries in the SAPGUI logon pad are stored in a file called 
+    saplogon.ini file, which is located in the path C:\Windows​
 
 ########################################
-There are various ways to access an SAP System. The most commonly used are SAPGUI for Windows, 
-SAPGUI for JAVA and WEBGUI for browsers​
-
-SAPGUI is a client utility that has to be installed on a user’s machine​
-SAPGUI is available for installation on Windows and on Non-Windows platforms as well​
-A JAVA based SAPGUI is required for OS such as Linux or any other Unix flavor​
-SAPGUI is available as SAPGUI for HTML, popularly called WEBGUI, that is supported on most 
-common browsers such as IE 6, Firefox 3​
-For Windows desktops, the entries in the SAPGUI logon pad are stored in a file called saplogon.ini file, 
-which is located in the path C:\Windows​
-
-
-########################################
-There are few componts which are installed by default whihc ensures that the SAP runs properly
+There are few componts which are installed by default which ensures that the SAP runs properly
 
 SNOTE: SAP NOTE - This is given by SAP as an instruction, Basically a Knowledge Article, which are used to fix issues
 
@@ -160,13 +257,23 @@ CMD > SAPCAR -xvf SAPCARDJASDHNJKLASDN.SAR
 SAPinst> Run as Admin
 
 Software provisioning manager 
+#######################################################
 
+To login thru SAP GUI you need the following:
+    Application Server: Hostname or IP Address
+    System Number: SAP systme Number
+    Systme ID
+
+    Client: Client Number (the partion you are logging in | client number is a logical unit of an SAP system)
+    User: User ID 
+    Password 
 #######################################################
 
 How frequent are system refresh? Do they happen on a scheduled basis or are they done on-demand?
 
 #######################################################
 # DAY 2
+
 SAP Architecture - has 3 layers
 1. Presentation Layer
 2. Application Layer 
@@ -200,7 +307,7 @@ This distributes the load and ensures that the overall system works well​
 SAP R/3 System
 
 R stands for Real Time
-3 stands for the layers 
+3 stands for the layers - 3 tier architecture
 
 # SAP R2 Architectue in which the Database, SAP are together and SAP GUI is separate
 # SAP R1 Architectue in which the Database, SAP and SAP GUI are all together 
@@ -208,10 +315,12 @@ R stands for Real Time
 
 Presentaion layer on the local system | Application layer and Database layer somewhere else that is R2
 
+########################################################
 # Application Layer
 Application Layer contains the core services of SAP which keeps the services alive
 
-    Message Server - 
+    Message Server - It handles the communication between the distributed dispatches in ABAP system
+
     Dispatcher - takes the request from  the Presentaion layer and allocates the requst to work processes
         It is the heart of the SAP System, always ensure that 
         Works on FIFO principle
@@ -231,6 +340,8 @@ Application Layer contains the core services of SAP which keeps the services ali
         
         3. Update (V)- This updates the record in the table, the Dialog Workprocesses handles the update Workprocesses
             For updating the System
+
+            Update 2: Responsible for less time critical update
 
         4. Enqueue (E) - Basically one user can work on one table at a time, it will lock it for other users   
                 It works at the OS Level
@@ -257,7 +368,19 @@ Application Layer contains the core services of SAP which keeps the services ali
         Message Server - Create the connection / Establish the connection
         Gateway Server - It creates the approval for the connection, if it is allowed to happen or not
         
+        3. ICM (Internet Communication Manager) - There is only 1ICM per SAP system. The ICM recieves request for 
+        HTTP protocol and forwards it to the ABAP dispatcher for further processing 
+
+SAP uses the acronym DVEBMGSxx, where xx is the instance number to denote an SAP instance within the SAP system.
+
+    Example : If an SAP system comprises of 1 Central instance with number 01, and 2 Dialog Instances, 
+    with number 02 and 03, then the SAP system is said to be comprised of 
+    DVEBMGS01, DVEBMGS02 and DVEBMGS03 instances
+
 Dispathcers needs the Message Server, the Work Process needs Dispatcher to work, the Message Server needs the Database work
+
+
+AS ABAP stands for Application Server ABAP 
 
 RFC - Remote fuction call
 
@@ -351,6 +474,76 @@ SAP services are running in the SERVICES in TASK Manager then that means the sys
 # Once you are in authenticated you move on to the application
 # Then the application layer access the database layer
 
+## There Tier Architectue
+
+1. Presentation Layer - Those SAP R/3 software components that specialize in interacting with end users forms the presentation layer
+2. Application Layer - Those components that specialize in processing business applicaitons form the application layer
+3. Database Layer - Those components that specialize in the management, storage and retrieval of data form the Database Layer.
+
+Presentaion Layer is aka Client Layer
+
+Application Server
+    Application Server includes specialized systems multiple CPUs annd with large amount of RAM 
+    SAP apps are executed in applicaiton layer
+    It serves as a communicator between the presentation and database layer 
+    Application server is where the Dispatcher distributes the workload to the diffrent work processes that makes the job done
+
+Database Servers 
+    Database server contains specialized systems with fast and large drives
+    Database server stores and retreives data as per SQL queries generated by ABAP and JAVA applicaiton
+    Data store can be Business data, SAP system data, SAP tables, Programs.
+    Database and Application may exist on the same or different physical location
+    Examples − Oracle, Microsoft SQL Server, IBM DB/2, Siebel, Sybase, etc.
+
+Client in SAP
+    A client is a logical portion of an SAP R/3 physical database. 
+
+Points to Remember −
+    All customizing (configuration) and development (ABAP) work in SAP R/3 is performed in a client.
+    However, the data from both customizing and development work may be stored within an individual client (client dependent data) or among all clients (client independent data) in the system.
+
+Client Independent Data - Data contained across all clients in SAP system.
+    Ex: Datra dictionary objects(Tables, Views), ABAP Source Code, Screens and Menus 
+Client Dependent Data - Data specific to an individual client
+    Ex: Number Ranges, ABAP Variants, and user masters as well as the that is created or updated thru SAP R/3 transaction
+
+TCODE SM11 - Data dictionary
+    If the table has the first entry as MANDT (Then the table is client Dependent)
+    otherewise the table is client independent
+    
+SAP instance:
+    Dialog Instance:  Dialog instance exists in the application layer. Its purpose is to maintain the 
+    load on the server. Dialog instance exists on the different host. If a number of dialog instance
+    increases hardware resources, dispatcher, work processes also increases so that more number of
+    users can login at a time.
+
+    Central Instance: Central instance can also work as dialog instance. But the main thing is 
+    that it contains Enqueue and message servers. All dialog instances communicate with central 
+    instance before requesting  database with message server. When an instance is started, the 
+    dispatcher process attempts to establish a connection to the message server so that it can 
+    announce the services it provides (DIA, BTC, SPO, UPD, etc.).Lock table is managed in 
+    central instance by enqueue service.
+
+What is SID?
+    SID is a unique identification code for every R/3 installation (SAP system) consisting of 
+    a database server & several application servers. SID stands for SAP System Identification. 
+    SAPSID — a three-character code such as C11, PRD, E56, etc.)
+
+Logical System Names :
+    A logical system is an application system in which the applications work together on a common database. I
+    In SAP terms, the logical system is a client.
+    Since the logical system name is used to identify a system uniquely within the network, 
+    two systems cannot have the same name if they are connected to each other as source systems, 
+    or if there are plans to connect them in any way.
+
+SID – PBG
+Logical System Name – PBGCLNT100
+
+TCODE SM50 - Displays all the Work Processes
+
+It is also possible to view ABAP work process as Unix Processes
+    On a UNIX OS level these processes are denoted by "dw"
+
 #########################################################################
 DAY 3
 
@@ -365,13 +558,14 @@ SAP applicatioon is were you will be using the functionalities provided by the S
 #######################################################################
 Client Architectue
 
-SAP Reference Client
-Clinet 000
-Clinet 066
-Client 001
+SAP Reference Clients
+These clients provide diffrent features and must not be deleted
+Clinet 000 - Performs special functions, In particulare it is given ectended functionalities during upgrades
+Clinet 001 - is Basically a copy of client 000 and can be used as a basis for new customizing clients
+Client 066 - is a special client which is provided for operational system Monitoring, It is used by SAP R/3 Early watchers to provide performance recommendations
 
 What is Client?
-
+A client is a logical partition in the workspace
 
 Client Administration:
 SAP is an applicaiton which allows to create 1000 partiion within it, starting from (000-999), we can use any 
