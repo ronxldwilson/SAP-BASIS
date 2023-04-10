@@ -1094,6 +1094,7 @@ USER Administration
 When you create a SAP system, two users will be created SAP*, DDIC
 
 When you install a SAP HANA system, a standard user will be created called as SYSTEM
+Schema User - SAPABAP1 User is also created for SAP HANA 
 
 ##################################################################
 
@@ -1142,13 +1143,37 @@ SAP control is a kernel executable file which follows a number
     sapcontrol -nr 01 -function StopSystem  //instance no 01 has been stopped
     sapcontrol -nr 02 -function StopSystem  //instance no 02 has been stopped
 
+    sapcontrol -nr 00 -function GetProcessList
+
 For HANA DB the start/stop commands are:
     sapcontrol -nr 02 -function StopSystem  //instance no 02 has been stopped
 
 Need to become sidadm 
-    and then use: HDB stop
-
-
+    and then use: HDB stop // for HANA stop just do use this
+                HDB start // for HANA start
 
 df -kh = shows how many mounts you have / the number of drives you have
 
+#####################################################################################
+
+Schema User - SAPABAP1 User is also created for SAP HANA 
+
+User Level restrictions to ensure that the database is not entirely used up by one database
+
+configuration> global.ini > memeoryManager > statement_memory_limit
+
+System Replication: basically the high availability PAIR like in ServiceNow
+
+Now when the downtime is planned, we need to unregister the secondary systme 
+to ensure that the secondary doesn't become primary
+
+Unregister and then Disable the system then enable system replication
+
+Replication is available only for PROD systems
+######################
+PuTTY & SuperPuTTY
+
+
+###################################
+
+From HANA 2.0, it is recommended to use HANACockpit and not Studio for Monitoring
