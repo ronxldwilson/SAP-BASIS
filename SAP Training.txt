@@ -712,6 +712,8 @@ Ways of Importing:
 1. Manual Import: 
 2. Automatic Import:  
 
+<<<<<<< HEAD
+=======
 This process is owned by SAP BASIS
 
 
