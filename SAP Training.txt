@@ -1148,3 +1148,5 @@ Need to become sidadm
 
 
 
+df -kh = shows how many mounts you have / the number of drives you have
+
