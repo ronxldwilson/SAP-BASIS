@@ -844,6 +844,7 @@ Oracle -> Oracle
 MS SQL -> Microsoft
 DB2 -> IBM
 HANA -> SAP
+SYBASE -> SAP
 
 BASIS is also called as Infrastructure solution
 
@@ -967,7 +968,17 @@ chmod 777 <file >
 
 /usr/sap/trans/EPS/IN - New enhancements are kept here 
 
-######################
+##################################################################
+DAY 11
+
+TCODE - 
+
+
+
+
+
+
+##################################################################
 
 
 
