@@ -971,15 +971,180 @@ chmod 777 <file >
 ##################################################################
 DAY 11
 
+DATABASE Concepts
+
+Database Management System (DBMS) - includes database processes, a buffer in the main memory, data files that 
+contain the data, and log files, where changes to the data are logged. 
+
+Buffer - A memory for faster access
+
+The data is stored in the data files: Access to the data always takes place using the buffer in main memory.
+
+Diffrence beteween Structure Data and Data Files?
+Structure Data can be a table
+Data files could be images or audio files
+
+OLTP - Online Transaction Processing
+OLAP - Online Analytic Processing
+
+In traditional DB they used two kinds of DB to do the transaction and another for processing
+
+In SAP HANA, both have been elimninated and all is handled in one DB 
+
+ACID compliant ???
+
+
+SAP HANA is an in-memory data platform that is deployable as an on premise appliance, or in the cloud.  
+It is a revolutionary platform that’s best suited for performing real-time analytics, and developing and 
+deploying real-time applications. 
+
+SAP HANA is different by design.
+    It stores all data
+    1. In-memory
+    2. Columnar format
+    3. Compressed
+
+Generally in HANA DB the Disk Space and RAM is same. Therefore it is called In-memory data platform
+
 TCODE - 
 
+Row Store Vs Column Store
 
+HANA DB stores the Data in Column DB
 
+## SAP HANA Architectue
+Daemon - It is responsible for all other process and keep them running
 
+Index Server - which is responsible to save and do operations on the DB. It contains teh actual data and the engine for processing the data
+
+Name Server -  the name server owns the information about the topology of the SAP HANA system
+
+XS Engine - Allows Developeer to write and Run SAP based HANA appls without the need for additional Server
+    Also used to run web-based tools that come with SAP HANA, for instance for administration, lifecycle management and development.
+
+Extended Store Server - It is part of the SAP HANA dynamic tiering option of SAP HANA. It provides a high-performance disk-based column 
+    store for very big data up to the petabyte range.
+
+HDI Server - HDI handles the deployment of design-time artifacts into SAP HANA.
+
+Data Provisioning Server - It provides capabilities such as data provisioning in real time and batch mode, real-time data transformations, 
+    data quality functions, adapters for various types of remote sources, and an adapter SDK for developing additional adapters.
+
+Streaming Cluster - Smart data streaming extends SAP HANA with capabilities of SAP Event Stream Processor for consuming data streams and complex event processing. 
+
+Compile Server - Does the compilation of the stored procedure. It runs on every host
+
+Preprocedure Sever - Feeds unstructured data (for example text , documents) into SAP HANA
+
+SAP Web Dispatcher - Entry point for HTTPs Requests
+
+SAP Start srv / Service  -  Responsible for starting and stopping the otehr service
+
+###########################################################
+Data File and Log File
+
+Data File ??
+
+Log File ??
+
+Savepoint ??
+
+Synchronusly - Happening simultaneously
+Asynchronusly - Heppening not so simultaneously
+
+### SAP HANA Technical Deployment
+1. SCOS - Single component on One System
+2. MCOD - Multiple application on one SAP HANA system / Multiple components on One Database
+3. MCOS - 
+4. MultiTenant Database - combination of MCOD and MCOS
+
+Schema - is the place where the data related to 
+
+################################################################
+
+Install HANA database once and create multiple entities 
+
+Single Container Vs Multiple Container
+
+HANA Database Sizing
+
+# Scale up 
+
+# Scale out 
 
 
 ##################################################################
 
+
+
+Admin tools for SAP HANA 
+1. SAP HANA Studio - Some link with Eclipse
+2. SAP HANA Cockpit - 
+    SAP HANA Cockpit
+    SAP HANA Cockpit Manager
+
+3. SAP DBACOCKPIT - this is a TCODE 
+TCODE DBACOCKPIT - This is an operation on SAP GUI 
+
+4. SAP HANA HDBSQL Console  - SAP Linux environment 
+
+USER Administration
+When you create a SAP system, two users will be created SAP*, DDIC
+
+When you install a SAP HANA system, a standard user will be created called as SYSTEM
+
+##################################################################
+
+Database Backups: DB should be backed up to avoid loss due to disk failure
+    we can backup these files: Data Area, Log Area, Config Files (.ini)
+
+HANA Backup capabilities:
+    Full backup
+    Delta Backup
+    Redo Log Backups
+    Backup and Recovery using third party tools
+        Backend Tool can be used for backup
+    Integrity Checks for Backups
+    Backup lifecycle Management
+
+    Recovery to the most recent state - uses log backup recovery
+    Recovery to a specific point in time 
+    Recovery to a specific data backup - No log files are considered 
+    
+    Database copy using backup and Recovery
+
+Performing Backups:
+    Backups can be created using the following tools:
+    Creating data backups manually:
+        -  SAP HANA cockpit
+        -  SAP HANA studio
+        -  DBA Cockpit
+        -  SQL commands (command line)
+
+
+
+Backup Types: 
+1. Full Data Backup - 
+2. Incremental Backup - The data changed since the last full data bacup or the last delta backup
+3. Diffrential Backup - The data changed since the last full data backup 
+
+Backup Destination - 
+
+
+SAP start stop Command
+    startsap <instance>
+    stopsap <instance>
+
+SAP control is a kernel executable file which follows a number
+    sapcontrol -nr 10 -function StopSystem  //instance no 10 has been stopped
+    sapcontrol -nr 01 -function StopSystem  //instance no 01 has been stopped
+    sapcontrol -nr 02 -function StopSystem  //instance no 02 has been stopped
+
+For HANA DB the start/stop commands are:
+    sapcontrol -nr 02 -function StopSystem  //instance no 02 has been stopped
+
+Need to become sidadm 
+    and then use: HDB stop
 
 
 
