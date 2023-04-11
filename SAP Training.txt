@@ -1177,3 +1177,117 @@ PuTTY & SuperPuTTY
 ###################################
 
 From HANA 2.0, it is recommended to use HANACockpit and not Studio for Monitoring
+
+RDP - Remote Desktop Connection for connecting with Windows based system
+
+Counterpart of PuTTY and SupperPuTTY
+
+##################################################
+Day 12
+
+FOR SAP ABAP Process
+
+SAP app server 1
+SAP app server 2
+ABAP Message Server  = ABAP server Central Service
+Database Server
+
+For JAVA system 
+SCS 
+
+SAP app server 1
+SAP app server 2
+JAVA Message Server
+Database Server
+
+
+PI/PO - Middleware, it converts the info from third party to something which SAP can understand
+
+Ariba/ Coupa -  used for SCM - On cloud
+
+#################################################################################
+Solution Manager - is used to monitor both prod and non-prod system
+SAP Solution Manager aka SolMan 
+
+You can manage both SAP and Non-SAP applicaitons 
+
+It allows to centralize, enhace, automate and imptove the management of the entire system Landscape, thus reducing the cost of ownership
+
+SolMan is a platform to manage the cycle of your SAP solution in a distributed environment. It provides the tools, methods, and 
+process management content that can be used during preperation of business 
+
+Business Bluueprint - 
+
+
+Dual stack is no longer followed, single stack is folled only for SolMan
+
+
+################################################
+SolMan functionalities
+
+1. Integrate 
+    Solution documentation
+    Solution Implementation
+    Template Management
+    Test Management
+2. Operate
+    IT Service Management
+    Application Operation
+    Business Process Management
+    Maintenance Management
+3. Optimize
+    Change Control Management
+        Charm - Change Request Management
+    Upgrade Management
+    SAP Engagement and Service Delivery
+    Custom Code Management
+
+
+To Do: 
+TCODE - SLicense how many license, what other info and all is there 
+TCODE - RZ70 - Details about SLD
+
+SolMan Supports real time Text Analysis since it uses HANA, 
+
+############################################################################################
+
+SLD - System Landscape Directory
+
+The System Landscape Directory of SAP NetWeaver (SLD) serves as a central information repository for your 
+system landscape. A system landscape consists of a number of hardware and software components that depend 
+on each other with regard to installation, software updates, and demands on interfaces.
+
+
+LMDB - Landscape Management DataBase
+The SAP Solution Manager landscape management database (LMDB) is the central landscape information repository. 
+A system landscape description is the basis for almost all SAP Solution Manager applications, like Monitoring and Alerting.
+
+
+SolMan
+
+SMP for ABAP
+SMJ for JAVA
+
+In java system there is something called as Destination which can be used to create the link???
+
+
+
+
+ABAP System                                            Soloman Java SLD 
+
+RZ70 
+Diagnostic Agent installed at OS level
+
+SLD resides on Solman Java 
+and Solman ABAP LMDB gets the info thru background sync via Diagnostic and RZ70
+
+####################################################################################
+EWA - Early watch alert = It's a feature of SolMan
+
+
+
+
+
+
+
+
