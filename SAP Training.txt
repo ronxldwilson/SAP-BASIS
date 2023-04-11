@@ -1280,8 +1280,7 @@ SLD resides on Solman Java
 and Solman ABAP LMDB gets the info thru background sync via Diagnostic and RZ70
 
 ####################################################################################
-EWA - Early watch alert = It's a feature of SolMan
-
+EWA - Early watch alert = It's a feature of SolMan/ generated on a weekly basis
 
 ChaRM - Change Request Management
 
@@ -1297,8 +1296,92 @@ FIT - Functional Integration Testing
 To Do: 
 TCODE - SLicense how many license, what other info and all is there 
 TCODE - RZ70 - Details about SLD
-TOCODE - SOLMAN_WORKCENTER
-Diagnostic Agent
+TOCODE - SOLMAN_WORKCENTER runs of Fiori platform which is based on UI5
+Diagnostic Agent at the OS level
 TCODE - Solman_setup
 LMDB
 SLD
+
+
+##############################################################
+
+Practical Session
+
+TCODE - LMDB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##############################################################
+Day 13
+
+System Refresh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################
