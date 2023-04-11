@@ -1243,9 +1243,7 @@ SolMan functionalities
     Custom Code Management
 
 
-To Do: 
-TCODE - SLicense how many license, what other info and all is there 
-TCODE - RZ70 - Details about SLD
+
 
 SolMan Supports real time Text Analysis since it uses HANA, 
 
@@ -1285,9 +1283,22 @@ and Solman ABAP LMDB gets the info thru background sync via Diagnostic and RZ70
 EWA - Early watch alert = It's a feature of SolMan
 
 
+ChaRM - Change Request Management
+
+SAP ChaRM is tool delivered with SAP Solution manager that manages activities performed during a change 
+from design to testing to final promotion to production system. It allows you to track change requests, 
+transport requests in change management system in the entire business solution.
+
+
+FIT - Functional Integration Testing
 
 
 
-
-
-
+To Do: 
+TCODE - SLicense how many license, what other info and all is there 
+TCODE - RZ70 - Details about SLD
+TOCODE - SOLMAN_WORKCENTER
+Diagnostic Agent
+TCODE - Solman_setup
+LMDB
+SLD
