@@ -20,7 +20,7 @@ Silos breakdown done by ERP
 
 SAP has two areas:
 1. SAP Technical
-    - SAP ABAP
+    - SAP ABAP (Advanced Business Application Programming)
         Used for Development
         Languages Required:
         SQL, C,  
@@ -384,10 +384,10 @@ AS ABAP stands for Application Server ABAP
 
 RFC - Remote fuction call
 
-TCODE - SU01 (Helps in Create, delete, and change values)
+TCODE - SU01 User Maintenance (Helps in Create, delete, and change values) 
 TCODE - SM50 (To see the work processes) (To see if the system is healthy) (All the process should be in waiting status)
 TCODE - SM04 (Shows the people logged in the system) (or USER Session) (can be used to check if a user is using too much RAM)
-TCODE - RZ10 (Used for Editing the user profiles)
+TCODE - RZ10 Editing Profiles (Used for Editing the user profiles)
 TCODE - SM36 (allows for scheduling Background Jobs)
 TCODE - SM12 - Lock Entires in SAP system (Shows the tables which have been locked)
 TCODE - SPAD Integration with printers??
