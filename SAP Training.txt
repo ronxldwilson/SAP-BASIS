@@ -601,7 +601,7 @@ TCODE - SCC4 - Maintain Clients / client management/ Client Administration / Cre
 
 TCODE - SCCL - Local Client Copy 
 TCODE - SCC9 - Remote Client Copy 
-
+SCC5 - Client Delete
 TCODE - Client Import Export
 
 TCODE - SCC1 - Special function SCC1
@@ -611,7 +611,8 @@ TCODE - SCC1 - Special function SCC1
 Client Transport    
     TCODE - SCC8 - Client Export
     TCODE - SCC7 - Client Post process import
-    TCODE - SCC9 - Remote copy Without using TMS / Transport Management System
+        For proccessing the imported transport
+    TCODE - SCC9 - Remote client copy Without using TMS / Transport Management System
 
 TCODE - SCC3 Client Copy logs
 
@@ -696,6 +697,8 @@ DAY 5
 Transport Management System
 
 Bundeled package is called as Transport
+
+RDDIMDP --> Import Transports into target system, this BackgroundJob runs and imports the Transports
         
 Transport Management System - This is a one time task which is done
 Domain Controller - This maintains the paths - Created thru development System
@@ -1292,6 +1295,7 @@ transport requests in change management system in the entire business solution.
 FIT - Functional Integration Testing
 
 
+Link for Study: https://support.sap.com/en/alm/solution-manager.html
 
 To Do: 
 TCODE - SLicense how many license, what other info and all is there 
@@ -1332,56 +1336,103 @@ Day 13
 
 System Refresh
 
+There is something called as parallel System: aka N+1 landscape
+
+This can be used in case of emergency scenarios
+
+DEV1 ---> QAS1 ---> Prod
+                    ^
+DEV2 ---> QAS2 -----|
+
+Dictarorship example
 
 
+Hetrogeneous System Copy:
+
+Homogeneous system copy
 
 
+###
+System Refresh Procedure
+Pre steps
+1. Take appropriate Screenshots
+        TCODE   SM51 - How many applications servers you have    
+        TCODE   WE20 - Partner profile 
+                    for all entires take SS
+        TCODE   WE21 -  
+        TCODE   SMLG - Logon Group
+        TCODE   RZ12 - RFC Server groups  
+        TCODE   RZ04 - Oprtaation modes
+                        For time based operations of the instance
+        TCODE   SMQS - For Queue
+        TCODE   SMQR - 
+        TCODE   SM59 - 
+        TCODE   SCC4 - Client Administration
+        TCODE   RZ10 - For profiles
+        TCODE   SM61 -
+        TCODE   STMS -  TMS Management
 
 
+2. Take backup of configuration tables in TOC of QA
+
+3. Take backup of User Master Record using Transport
+    Take Client Copy using SCC8
+    Profile used is SAP_USER = User Master Records and Authorization
+
+4. Sent out proper communication to the concerned teams
+
+Back Up and Restore
+    Backup
+    Database recovery 
+        SAP HANA cockpit
+        SAP HANA studio
+        Native SQL
+        DBA Cockpit for SAP HANA
+    Recovery
+        Recover to the most recent state
+        Recover to a specific point in time
+
+    Check the HANA DB License
+    Stop the application server
+    Do the recovery from the HANA Studio
+        backup and Recovery> Recover Tenant Database
+    Recover the data from Databackup files
+
+    You take the backup from Prod and then Restore it in the QAS
+    As part of recovery the Database will be stopped and restarted
+
+Post Steps
 
 
+    Change BDG process to zero(rdisp/wp_no_btc=0    
+        Can be done thru OS level
+    
+    Apply License
+    
+    Disable SCOT for mail configuration     =   
+        TCODE SCOT = These are the email settings 
+        TCODE SOST = These emails are about to be sent / Delete the production emails
+    Delete pending Production Mails in SOST
 
+    Run a report = Hold background jobs(BTCTRNS1), Delete Production Jobs, Release background jobs(BTCTRNS2)
+        BTCTRNS1
+    Run the Program in SA38 TCODE
 
+    TCODE SA38 = To run a program
+    TCODE SE38 
 
+    STMS configuration
 
+    BDLS for Logical system name configuration
+        TCODE - BDLS job from source to target to convert the production pointings to quality
+        
+        TCODE - BD54 - for seeing how many logical systme entries are there, it could be to CRM, or S4p or something else
+    Import TOC/Transports of configurations 
 
+    RDDIMDP --> Import Transports into target system, this BackgroundJob runs and imports the Transports
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Run SCC7 for post process import
+    Check for Pre-refresh screenshots for other configurations
 
 
 ###############################################################
