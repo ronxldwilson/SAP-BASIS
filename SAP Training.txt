@@ -660,14 +660,14 @@ DAY 4
 RFC - It creates a connectivity between SAP systesm, it can connect with SAP-SAP system using ABAP connection,
     or it can connect to non SAP system using HTTP. It is done using Message Server. 
 
-TCODE - SM59 The transaction to create RFC
+TCODE SM59 The transaction to create RFC
 Monitoring - List of Transactions which you need to monitor
 
 Transaction Based 
-SM37 - Checks all Background process, ensure that NO Background process fails 
-ST22 Dumps 
-
-TCODE - SM21 - System Logs
+TCODE SM37 - Checks all Background process, ensure that NO Background process fails 
+TCODE ST22 - Dumps 
+TCODE SMT1 - To define a calling in system to a trusted system
+TCODE SM21 - System Logs
 
 Need for Monitoring - To take proactive measures
 
@@ -675,8 +675,9 @@ Need for Monitoring - To take proactive measures
 TCODE SM51 - Instances of SAP System // Manage Work processes
 TCODE SM66 - To check global work processes
 TCODE SM12 - Enqueue Administration 
-TCODE SM13 -  
+TCODE SM13 - Update Management 
 TCODE AL08 - List of system Logged in User
+
 Update - For Critical
 Update Task 2 for non Critical
 
@@ -1077,10 +1078,7 @@ HANA Database Sizing
 
 # Scale out 
 
-
 ##################################################################
-
-
 
 Admin tools for SAP HANA 
 1. SAP HANA Studio - Some link with Eclipse
@@ -1127,15 +1125,12 @@ Performing Backups:
         -  DBA Cockpit
         -  SQL commands (command line)
 
-
-
 Backup Types: 
 1. Full Data Backup - 
 2. Incremental Backup - The data changed since the last full data bacup or the last delta backup
 3. Diffrential Backup - The data changed since the last full data backup 
 
 Backup Destination - 
-
 
 SAP start stop Command
     startsap <instance>
@@ -1176,9 +1171,7 @@ Replication is available only for PROD systems
 ######################
 PuTTY & SuperPuTTY
 
-
 ###################################
-
 From HANA 2.0, it is recommended to use HANACockpit and not Studio for Monitoring
 
 RDP - Remote Desktop Connection for connecting with Windows based system
@@ -1245,11 +1238,7 @@ SolMan functionalities
     SAP Engagement and Service Delivery
     Custom Code Management
 
-
-
-
 SolMan Supports real time Text Analysis since it uses HANA, 
-
 ############################################################################################
 
 SLD - System Landscape Directory
@@ -1263,16 +1252,12 @@ LMDB - Landscape Management DataBase
 The SAP Solution Manager landscape management database (LMDB) is the central landscape information repository. 
 A system landscape description is the basis for almost all SAP Solution Manager applications, like Monitoring and Alerting.
 
-
 SolMan
 
 SMP for ABAP
 SMJ for JAVA
 
 In java system there is something called as Destination which can be used to create the link???
-
-
-
 
 ABAP System                                            Soloman Java SLD 
 
@@ -1293,7 +1278,6 @@ transport requests in change management system in the entire business solution.
 
 
 FIT - Functional Integration Testing
-
 
 Link for Study: https://support.sap.com/en/alm/solution-manager.html
 
@@ -1328,11 +1312,9 @@ DEV2 ---> QAS2 -----|
 
 Dictarorship example
 
-
 Hetrogeneous System Copy:
 
 Homogeneous system copy
-
 
 ###
 System Refresh Procedure
@@ -1353,7 +1335,6 @@ Pre steps
         TCODE   RZ10 - For profiles
         TCODE   SM61 -
         TCODE   STMS -  TMS Management
-
 
 2. Take backup of configuration tables in TOC of QA
 
