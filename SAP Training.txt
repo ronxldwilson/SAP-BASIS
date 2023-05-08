@@ -322,7 +322,7 @@ Application Layer contains the core services of SAP which keeps the services ali
     Message Server - It handles the communication between the distributed dispatches in ABAP system
 
     Dispatcher - takes the request from  the Presentaion layer and allocates the requst to work processes
-        It is the heart of the SAP System, always ensure that 
+        It is the heart of the SAP System, always ensure that it is in a working Condition
         Works on FIFO principle
         POC between the GUI and and the Workprocesses
 
@@ -392,7 +392,7 @@ TCODE - SM36 (allows for scheduling Background Jobs)
 TCODE - SM12 - Lock Entires in SAP system (Shows the tables which have been locked)
 TCODE - SPAD Integration with printers??
 TCODE - SLicense - Shows all the License keys
-TCODE - ST06 to check the utilization
+TCODE - ST06 to check the utilization of the hardware components
 TCODE - 
 TCODE - 
 TCODE - 
