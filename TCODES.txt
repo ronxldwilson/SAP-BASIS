@@ -1,0 +1,27 @@
+IMPORTANT TCODES LIST
+
+TCODE SM50 - To see the work processes in the Instance
+TCODE SM59 - RFC Connections   
+TCODE SM37 - Job Search
+TCODE SM04 - Shows all the logged in people in the system
+TCODE SM12 - Lock entires in the SAP tables (Shows the tables which have been locked)
+TCODE SPAM - To install a support pacj upgrade
+TCODE SLICENSE - Show all the licence Keys
+TCODE SPAD - Integration with Printers
+TCODE ST06 - To check the utilization of the hardware components
+TCODE SAINT - A tool to install new components in the landscape
+TCODE SM13 - Update Records
+TCODE SMQ1 - Out bound Queues
+TCODE SMQ2 - Inbound queues 
+TCODE ST22 - Dumps
+TCODE SM66 - Work Process of all the systems of SAP installations
+TCODE 
+TCODE 
+TCODE 
+
+TCODE 
+TCODE 
+TCODE 
+TCODE 
+TCODE 
+TCODE 
