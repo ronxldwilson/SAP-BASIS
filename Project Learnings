@@ -18,17 +18,16 @@ Be careful while using special characters
 >> ll | grep filename*
 once you are clear that only the required files are there then only go on and delete the files
 >> rm -rf filename*
+this ensures that there is no difference in the intendend and the executed commands
 
-Lesson 4 : 
-Lesson 5 : 
+Lesson 4 : Be Cautious while using any kind of special charactersin command line at OS Level
+Lesson 5 : There are ways to run linux command via the SAP GUI 
 Lesson 6 :
-Lesson
+Lesson 7 : 
 
-
-Lesson
-Lesson
-
-Lesson
+Lesson 8 :
+Lesson 9 :
+Lesson 10 : 
 Lesson
 Lesson
 Lesson
