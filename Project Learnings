@@ -1,1 +1,34 @@
 This File will be used to track the learnings learnt while working on real production level SAP Systems
+
+##
+Lesson 1 : 
+Never touch something which you don't understand the purpose of.
+
+Lesson 2 :
+Be extremely careful while working at OS level in the system
+
+Lesson 3 : 
+In the linx system only runs command which have been verified 
+either at the OS Level in lower environment 
+or even using other commands in the system.
+
+Example: To delete certain files at the OS level, first verify it by greping and then remove them
+Be careful while using special characters
+
+>> ll | grep filename*
+once you are clear that only the required files are there then only go on and delete the files
+>> rm -rf filename*
+
+Lesson 4 : 
+Lesson 5 : 
+Lesson 6 :
+Lesson
+
+
+Lesson
+Lesson
+
+Lesson
+Lesson
+Lesson
+Lesson
