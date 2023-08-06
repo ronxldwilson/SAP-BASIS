@@ -1,0 +1,181 @@
+# SAP BASIS Overview
+
+SAP Basis refers to the administration of SAP system that includes activities like installation
+and configuration, load balancing, and performance of SAP applications running on Java
+stack and SAP ABAP. This includes the maintenance of different services related to
+database, operating system, application and web servers in SAP system landscape and
+stopping and starting the system.
+
+The key responsibilities of SAP Basis Administrator include:
+    - System installation and Configuration
+    - Load balancing on servers
+    - Performance management of different components
+    - Managing interfaces and integration with servers
+    - Managing servers and different services
+
+With the help of SAP Basis, different SAP modules like Finance Accounting, Production
+Planning, Sales and Distribution, SAP EWM and other modules can integrate and
+communicate with each other.
+
+SAP Basis supports the installation and configuration of SAP applications on different
+operating systems like Windows, Unix, AS/400, etc. and different databases like SQL
+Server, Oracle, IBM DB2 for back end database.
+
+# Different roles and responsibilities in SAP Administration
+
+Solution Specialist
+The Solution Specialist is responsible for:
+    - Upgrading the SAP version of system landscape
+    - SAP Data backup archive
+    - Migration of Operating system and Database
+    - Installation of AP/Add On
+
+Interface Analyst
+The Interface Analyst is responsible for:
+    - Configuration and set up of interface between different modules
+
+System Administrator
+The System Administrator is responsible for:
+    - Monitoring the performance of SAP system and modules
+    - Maintaining SAP system health and performing health checkup
+
+SAP Database Administrator
+The SAP Database Administrator is responsible for:
+    - Backup and restoring the database of SAP system
+    - Managing database objects
+
+Transport and Batch Job Administrator
+The Transport and Batch Job Administrator is responsible for:
+    - Managing batch job scheduling and replication
+    - Managing SAP Control access in system landscape
+
+DDIC Manager
+The DDIC Manager is responsible for:
+    - Managing changes to Data Dictionary
+
+SAP Architect
+The SAP Architect is responsible for:
+    - Designing work and data flow in the SAP system
+    - Managing SAP sizing
+
+SAP ABAP Specialist
+The SAP ABAP Specialist is responsible for:
+    - Troubleshooting and tuning of ABAP Programs
+    - Applying correction to Programs as per SAP
+    - Coding and customization of ABAP program as per requirement
+
+#SAP Instance and SID
+
+A SAP instance is when you install and configure a SAP system. This instance defines a
+group of resources — memory, processors and other resources in the system. This allows
+users to login to the SAP system and share the same resources.
+
+SAP instance is managed by CCMS. Users can login to the SAP system using an instance.
+
+A SAP system can consist of one or more instances — you can set up a SAP system with
+a single instance with only one CCMS or you can configure a system with two or more
+separate instances in client/server environment
+
+
+#Configuring a SAP instance
+
+You need to follow these steps to configure a SAP instance:
+    Step 1: You need to define separate directories for UNIX, AS/400, or Microsoft Windows
+    NT server on which the instance is to run.
+    Step 2: You can use a shared file system.
+    Step 3: For each instance, there are entries created in operating system configuration
+    files (/etc/services, /etc/sapconfig…).
+    Step 4: There are communication entries created in the host.
+    Step 5: For each instance, start and system profiles are created.
+    Step 6: For each instance, operating system users are installed.
+
+Creating an instance for one server
+You need to follow these steps to create an instance for one server:
+    Step 1: To create an instance, you should first define the mode of operation.
+    Step 2: To create an instance, go to CCMS > Configuration or use Transaction code RZ04.
+    Step 3: Go to instances/operation modes
+    Step 4: To create a new instance, click on create new Instance — (F6) op:
+    Step 5: Enter the host name and click on current settings. When application server is
+    already running, the system will display the current settings for that instance.
+    Step 6: If the application server is not running, you should use the input help to display
+    the possible entries and fill the below values.
+    Step 7: Enter the host name and choose current settings. If the application server is
+    already running, the system will display the current settings for that instance. However, if
+    the application server is not yet running, you should use the input help to display the
+    possible entries and fill in the following fields:
+
+The SAP System Number is the number that is mentioned when the SAP System is
+installed.
+
+#Start Profile: Profile Name
+Insert the name of the start profile from Profiles to start the instance. You can also click
+on “choose the input help” to display a list of available start profiles. You can select a
+profile from the available list.
+
+#Instance Profile: Profile Name
+You have to select the name of instance profile from Profiles to run the instance. You can
+click on “input help” to display a list of available instance profiles.
+To save the instance, click on Save button at the top > Continue
+
+#Maintaining Instance Definition
+When you define operation modes, you need to maintain instance definition. Follow these
+steps to change the definition:
+    Step 1: Use Transaction Code: RZ04
+    Step 2: Select Instances/operation mode
+    Step 3: Select an entry from the list of productive instances.
+    Step 4: You can then change the data for that instance.
+    Step 5: You can also delete an instance, operation mode using the same transaction code.
+    Step 6: To delete an operation mode — From the list of productive operation modes,
+    position the cursor on a line with the operation mode. Select operation mode > Delete.
+    This deletes the operation mode, and all the instances and work process definitions
+    assigned to it.
+
+#System Landscape
+The presentation layer communicates with the application server to perform all the
+processing and which is known as brains of an SAP system.
+
+An application server consists of multiple instances and communicates with the database
+layer of the three-tier architecture.
+
+The bottom layer is called the database layer. This is responsible to store all the data.
+The database of SAP system is kept on a separate server for performance and security
+reasons.
+
+The presentation layer consists of different components for ABAP and JAVA that enables
+the communication and processing of data in SAP system.
+
+The key components of the presentation layer include the following:
+    - Message Server – This is used  to manage communication between distributed
+    dispatchers in the ABAP system.
+    
+    - Message Server – This is used to manage server processes and JAVA dispatchers.
+    It is used to manage communication within JRE.
+
+    - Dispatcher Queue – This is used to store multiple work process types.
+    
+    - Dispatcher – This is used to distribute the requests to the work processes.
+    
+    - Memory Pipes – This is used to manage communication between ICM and ABAP
+    work processes.
+    
+    - Enqueue Server – This is used to handle logical locks set by the executed Java
+    application program.
+    
+    - Java Dispatcher – This is responsible to receive the client requests via
+    presentation layer and forward to the server process.
+    
+    - Gateway – This is used to manage communication between SAP system and
+    external systems.
+    
+    - ABAP Work processes – This separately executes dialog steps in R/3 applications
+    separately.
+
+
+
+
+
+
+
+
+
+
