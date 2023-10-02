@@ -1,5 +1,13 @@
 IMPORTANT TCODES LIST
 
+/n - to cancel the current transaction
+/nXXXX - to call transaction XXXX directly from another transaction. Without the prefix you can only call XXXX from the SAP Easy Access screen.
+/o - to display the overview of own sessions
+/oXXXX - to call transaction XXXX in a new session directly from another transaction
+/nend - to end the logon session with a confirmation dialog box
+/nex - to end the logon session without a confirmation dialog box
+/i - to delete the session you are currently using
+
 TCODE SM50 - To see the work processes in the Instance
 TCODE SM59 - RFC Connections   
 TCODE SM37 - Job Search
@@ -15,10 +23,9 @@ TCODE SMQ1 - Out bound Queues
 TCODE SMQ2 - Inbound queues 
 TCODE ST22 - Dumps
 TCODE SM66 - Work Process of all the systems of SAP installations
-TCODE 
-TCODE 
-TCODE 
 
+
+TCODE SM04 - Lists all the currently logged in users
 TCODE 
 TCODE 
 TCODE 
